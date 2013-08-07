@@ -171,7 +171,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.call_ring.multiple=0
 
 #Upto 3 layers can go through overlays
-PRODUCT_PROPERTY_OVERRIDES += persist.hwc.mdpcomp.enable=true
+PRODUCT_PROPERTY_OVERRIDES += debug.mdpcomp.maxlayer=3
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.adb.notify=0 \
+	debug.sf.hw=1 \
+	debug.egl.hw=1 \
+	debug.composition.type=dyn \
+	video.accelerate.hw=1 \
+	debug.performance.tuning=1 \
+	debug.mdpcomp.logs=0 \
+	debug.enable.wl_log=1
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
